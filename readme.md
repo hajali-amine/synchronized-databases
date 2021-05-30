@@ -1,6 +1,6 @@
 # Synchronized Databases
 
-A mini-project that @AhmedGrati and I worked on during our __Distributed Systems__ workshop at INSAT.
+A mini-project that [Ahmed Grati](https://github.com/AhmedGrati) and I worked on during our __Distributed Systems__ workshop at INSAT.
 
 ## Problem:
 
