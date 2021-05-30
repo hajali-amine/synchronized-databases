@@ -36,7 +36,7 @@ The main of this lab is to create a distributed application that synchronisation
 
 * RabbitMQ (using the port 5672).
 * PostgreSQL (using the port 5432).
-* Create the Database __bo1__, __bo2__, __bo3__ and __ho__.
+* Create the Databases __bo1__, __bo2__, __bo3__ and __ho__.
 
 ## Process:
 
