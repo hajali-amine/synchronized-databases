@@ -1,5 +1,7 @@
 # Synchronized Databases
 
+A mini-project that @AhmedGrati and I worked on during our __Distributed Systems__ workshop at INSAT.
+
 ## Problem:
 
 Obviously, there are tons of different ways to synchronize distributed databases. 
