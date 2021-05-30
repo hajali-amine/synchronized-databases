@@ -3,7 +3,6 @@
 ## Problem:
 
 Obviously, there are tons of different ways to synchronize distributed databases. 
-
 <br>
 
 Let's imagine that we have an unusual situation with restrictions below: 
@@ -12,11 +11,9 @@ Let's imagine that we have an unusual situation with restrictions below:
 * All offices are located in different places, and some of them have limitation with the internet connection. 
 
 It could even be a situation where the internet is available for 1-2 hours per day. 
-
 <br>
 
 The perfect solution is to write your own DB sync mechanism data between branches using **RabbitMQ Message queues**. 
-
 <br>
 
 For this lab we assume one *Head Office (HO)* and *3 Branch offices (BO)* for sales. The 3 sales branches are physically separated from the Head office. They manage their databases independently and they need to synchronise their data to the Head office that maintain the hole data of sales. We assume that the database are based on the product sales table with the following structure.
