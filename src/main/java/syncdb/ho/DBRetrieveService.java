@@ -8,7 +8,7 @@ public class DBRetrieveService {
     //Coordonnées de la base
     public String user="postgres";
     public String password = "root";
-    public String url = "jdbc:postgresql://localhost:5433/ho";
+    public String url = "jdbc:postgresql://localhost:5434/ho";
 
 //Requete pour recuperer les données
     public String query = "SELECT * FROM product_sale";

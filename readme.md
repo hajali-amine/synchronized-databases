@@ -47,5 +47,6 @@ All you need is Docker! :)
 2. Execute HoJob: *java HoJob*
 3. Execute BoJob with an argument of 1: *java BoJob 1*
 4. Execute BoJob with an argument of 2: *java BoJob 2*
+5. Execute BoJob with an argument of 3: *java BoJob 3*
 
 ## Have fun!

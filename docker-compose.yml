@@ -15,7 +15,7 @@ services:
     volumes:
       - ./initdb/ho:/docker-entrypoint-initdb.d/
     ports:
-      - '5433:5432'
+      - '5434:5432'
 
   bo1:
     image: postgres:14.1-alpine
@@ -38,4 +38,16 @@ services:
       - ./initdb/bo:/docker-entrypoint-initdb.d/
     ports:
       - '5432:5432'
+
+  bo3:
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=bo3
+    volumes:
+      - ./initdb/bo:/docker-entrypoint-initdb.d/
+    ports:
+      - '5433:5432'
+
 
