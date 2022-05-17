@@ -1,4 +1,4 @@
-package seance1.bo;
+package syncdb.bo;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -98,7 +98,7 @@ public class InsertPanel extends JPanel{
                 Calendar calendar = Calendar.getInstance();
                 java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
-                String url = "jdbc:postgresql://localhost:5432/bo" + Integer.toString(i);
+                String url = "jdbc:postgresql://localhost:543" + Integer.toString(i) + "/bo" + Integer.toString(i);
                 String user="postgres";
                 String password = "root";
                 connection = DriverManager.getConnection(

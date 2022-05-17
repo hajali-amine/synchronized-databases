@@ -1,0 +1,41 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  ho:
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ho
+    volumes:
+      - ./initdb/ho:/docker-entrypoint-initdb.d/
+    ports:
+      - '5433:5432'
+
+  bo1:
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=bo1
+    volumes:
+      - ./initdb/bo:/docker-entrypoint-initdb.d/
+    ports:
+      - '5431:5432'
+
+  bo2:
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=bo2
+    volumes:
+      - ./initdb/bo:/docker-entrypoint-initdb.d/
+    ports:
+      - '5432:5432'
+

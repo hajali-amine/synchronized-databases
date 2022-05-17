@@ -1,4 +1,4 @@
-package seance1.ho;
+package syncdb.ho;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

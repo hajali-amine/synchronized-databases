@@ -39,16 +39,13 @@ The main of this lab is to create a distributed application that synchronisation
 
 ## Requirements:
 
-* RabbitMQ (using the port 5672).
-* PostgreSQL (using the port 5432).
-* Create the Databases __bo1__, __bo2__, __bo3__ and __ho__.
+All you need is Docker! :)
 
 ## Process:
 
-1. Execute the SQL files in the *ho* and the *bo* packages in the database.
+1. Run `docker-compose up`
 2. Execute HoJob: *java HoJob*
 3. Execute BoJob with an argument of 1: *java BoJob 1*
 4. Execute BoJob with an argument of 2: *java BoJob 2*
-5. Execute BoJob with an argument of 3: *java BoJob 3*
 
 ## Have fun!

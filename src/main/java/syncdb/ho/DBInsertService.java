@@ -1,11 +1,11 @@
-package seance1.ho;
+package syncdb.ho;
 
 import java.sql.*;
 import java.util.List;
 
 public class DBInsertService {
     //coordonnées de la base
-    public String url = "jdbc:postgresql://localhost:5432/ho";
+    public String url = "jdbc:postgresql://localhost:5433/ho";
     public String user="postgres";
     public String password = "root";
     //Requete pour inserer dans la base

@@ -1,8 +1,15 @@
-package seance1.ho;
+package syncdb.bo;
+
+import lombok.*;
 
 import java.util.Date;
 
-//le model du produit
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+//Le model du produit
 public class Product {
     private int id;
     private Date date;
@@ -14,21 +21,6 @@ public class Product {
     private float tax;
     private double total;
     private int bo_num;
-
-    public Product() {}
-
-    public Product(int id, Date date, String region, String product, int qty, float cost, double amt, float tax, double total, int bo_num) {
-        this.id = id;
-        this.date = date;
-        this.region = region;
-        this.product = product;
-        this.qty = qty;
-        this.cost = cost;
-        this.amt = amt;
-        this.tax = tax;
-        this.total = total;
-        this.bo_num=bo_num;
-    }
 
     public int getId() {
         return id;
@@ -110,4 +102,20 @@ public class Product {
         this.bo_num = bo_num;
     }
 
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", date=" + date +
+                ", region='" + region + '\'' +
+                ", product='" + product + '\'' +
+                ", qty=" + qty +
+                ", cost=" + cost +
+                ", amt=" + amt +
+                ", tax=" + tax +
+                ", total=" + total +
+                ", bo_num=" + bo_num+
+                '}';
+    }
 }

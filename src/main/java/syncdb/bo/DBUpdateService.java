@@ -1,4 +1,4 @@
-package seance1.bo;
+package syncdb.bo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ public class DBUpdateService {
 
     public DBUpdateService(int bo_num) {
         this.bo_num = bo_num;
-        this.url = "jdbc:postgresql://localhost:5432/bo" + Integer.toString(bo_num);
+        this.url = "jdbc:postgresql://localhost:543" + Integer.toString(bo_num) + "/bo" + Integer.toString(bo_num);
     }
     //Coordonnées de la base
     public String url;

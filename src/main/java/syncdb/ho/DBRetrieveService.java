@@ -1,27 +1,19 @@
-package seance1.bo;
+package syncdb.ho;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DBRetrieveService {
-    private int bo_num;
-
-    public DBRetrieveService(int bo_num, boolean sent) {
-        this.bo_num = bo_num;
-        this.url = "jdbc:postgresql://localhost:5432/bo" + Integer.toString(bo_num);
-        query = "SELECT * FROM product_sale" + (sent ? "" : " where sent=FALSE");
-    }
-
     //Coordonnées de la base
-    public String url;
     public String user="postgres";
     public String password = "root";
-    //Requete pour recuperer les données
-    public String query;
+    public String url = "jdbc:postgresql://localhost:5433/ho";
+
+//Requete pour recuperer les données
+    public String query = "SELECT * FROM product_sale";
     //Methodes pour recuperer les produits
-    public List<Product> retrieve() throws SQLException{
-        System.out.println(this.url);
+    public List<Product> retrieve() throws SQLException {
         List<Product> res = new ArrayList<>();
         try(Connection connection = DriverManager.getConnection(url, user, password);
             PreparedStatement pst = connection.prepareStatement(query);
@@ -39,12 +31,12 @@ public class DBRetrieveService {
                 product.setAmt(rs.getDouble("amt"));
                 product.setTax(rs.getFloat("tax"));
                 product.setTotal(rs.getDouble("total"));
-                product.setBo_num(bo_num);
+                product.setBo_num(rs.getInt("bo_num"));
                 res.add(product);
             }
 
             return res;
         }
-
     }
 }
+
